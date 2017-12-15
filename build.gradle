@@ -8,6 +8,7 @@ buildscript {
         buildDir = relativePath("./build")
     }
     repositories {
+        maven {url 'http://maven.aliyun.com/nexus/content/groups/public/'}
         mavenCentral()
         maven {
             url "https://plugins.gradle.org/m2/"
@@ -39,6 +40,7 @@ sourceCompatibility = project.javaV
 targetCompatibility = project.javaV
 
 repositories {
+    maven {url 'http://maven.aliyun.com/nexus/content/groups/public/'}
     mavenCentral()
 }
 
@@ -62,5 +64,5 @@ dependencies {
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '3.5.1'
+    gradleVersion = '4.4'
 }

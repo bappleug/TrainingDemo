@@ -17,7 +17,7 @@ management:
         enabled: false
 
 security:
-    ignored: /**
+    ignored: /login_exam, /trainings
 
 cors:
     allowed-origins: "*"

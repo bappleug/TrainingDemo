@@ -11,13 +11,17 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class ResourceWithUrl<T> {
 
+    private String msg;
+    private int code;
     private T content;
     private String url;
 
     public ResourceWithUrl() {
     }
 
-    public ResourceWithUrl(T content, String url) {
+    public ResourceWithUrl(String msg, int code, T content, String url) {
+        this.msg = msg;
+        this.code = code;
         this.content = content;
         this.url = url;
     }
@@ -38,5 +42,21 @@ public class ResourceWithUrl<T> {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public String getMsg() {
+        return msg;
+    }
+
+    public void setMsg(String msg) {
+        this.msg = msg;
+    }
+
+    public int getCode() {
+        return code;
+    }
+
+    public void setCode(int code) {
+        this.code = code;
     }
 }

@@ -94,7 +94,7 @@ public class TodoResource {
     }
 
     private ResourceWithUrl toResource(Todo todo) {
-        return new ResourceWithUrl(todo, getHref(todo));
+        return new ResourceWithUrl("ok", 200, todo, getHref(todo));
     }
 
     private HttpEntity<ResourceWithUrl> respondWithResource(Todo todo, HttpStatus statusCode) {
